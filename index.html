@@ -333,29 +333,41 @@ h1 span{
     text-shadow:0 0 10px #d6a84f;
 }
 
-/* MOBILE */
+/* MOBILE - CARD SUS PE CER */
 @media(max-width:900px){
+
+    html,body{
+        width:100%;
+        height:100%;
+        min-height:100svh;
+        overflow:hidden;
+    }
+
     body{
         background:
         linear-gradient(rgba(0,0,0,.22),rgba(0,0,0,.55)),
         url("main-bg-mobile.png");
         background-size:cover;
-        background-position:center center;
+        background-position:center top;
         background-repeat:no-repeat;
         background-attachment:scroll;
     }
 
     .main{
         min-height:100svh;
-        padding:58px 10px 10px;
-        align-items:center;
+        padding:24px 8px 0;
+        align-items:flex-start;
         justify-content:center;
     }
 
     .card{
         max-width:330px;
-        padding:55px 17px 16px;
+        padding:30px 12px 8px;
         border-radius:21px;
+
+        transform:scale(.90);
+        transform-origin:top center;
+
         backdrop-filter:blur(5px);
         -webkit-backdrop-filter:blur(5px);
     }
@@ -403,9 +415,18 @@ h1 span{
         border-radius:7px;
     }
 
-    .info-box div::before{ font-size:15px; }
-    .info-box strong{ font-size:9px; letter-spacing:.8px; }
-    .info-box span{ font-size:10px; }
+    .info-box div::before{
+        font-size:15px;
+    }
+
+    .info-box strong{
+        font-size:9px;
+        letter-spacing:.8px;
+    }
+
+    .info-box span{
+        font-size:10px;
+    }
 
     .section-title{
         font-size:9px;
@@ -416,7 +437,9 @@ h1 span{
     }
 
     .section-title::before,
-    .section-title::after{ width:18px; }
+    .section-title::after{
+        width:18px;
+    }
 
     .links-grid{
         grid-template-columns:1fr 1fr;
@@ -453,7 +476,12 @@ h1 span{
 }
 
 @media(max-width:360px){
-    .card{ max-width:300px; }
+    .card{
+        max-width:300px;
+        transform:scale(.84);
+        transform-origin:top center;
+    }
+
     h1{ font-size:28px; }
     h1 span{ font-size:19px; }
     .links-grid{ gap:7px; }
